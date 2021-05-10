@@ -4,13 +4,6 @@
 
     <ValidationObserver v-slot="{ invalid }" class="form">
       <h1>{{ $t('title') }}</h1>
-
-      <button
-        class="switch-local"
-        @click="switchLocale"
-      >
-        Switch Locale
-      </button>
       
       <!-- Name -->
       <ValidationProvider name="Username" rules="required" v-slot="{ errors }">
@@ -21,12 +14,6 @@
       <!-- Email -->
       <ValidationProvider name="Email" rules="required|email" v-slot="{ errors }">
         <input v-model="email" type="email" placeholder="Email">
-        <span class="error">{{ errors[0] }}</span>
-      </ValidationProvider>
-
-      <!-- Phone -->
-      <ValidationProvider name="Phone" rules="required|phone" v-slot="{ errors }">
-        <input v-model="phone" type="text" placeholder="Phone">
         <span class="error">{{ errors[0] }}</span>
       </ValidationProvider>
 
@@ -48,24 +35,14 @@
 </template>
 
 <script>
-import { localize } from 'vee-validate';
-
 export default {
   data() {
     return {
       name: '',
       email: '',
-      phone: '',
       password: '',
       confirmPassword: '',
       locale: 'en'
-    }
-  },
-  methods: {
-    switchLocale() {
-      this.locale = this.locale === 'en' ? 'ru' : 'en';
-      // switch the locale.
-      localize(this.locale);
     }
   }
 }
