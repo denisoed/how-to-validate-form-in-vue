@@ -1,5 +1,9 @@
 # how-to-validate-for-in-vue
 
+EN: https://maddevs.io/blog/vue-form-validation/
+
+RU: https://medium.com/maddevs-io/как-валидировать-формы-во-vue-js-8907026da03d
+
 ## Build Setup
 
 ```bash
