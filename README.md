@@ -1,4 +1,4 @@
-# how-to-validate-for-in-vue
+# how-to-validate-form-in-vue
 
 EN: https://maddevs.io/blog/vue-form-validation/
 
